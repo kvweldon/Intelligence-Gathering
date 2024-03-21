@@ -32,3 +32,13 @@ I performed a whois query using the whois database host of 192.0.2.10 against th
 
 ![image](https://github.com/kvweldon/Intelligence-Gathering/assets/141193154/9daedb38-60ab-4b48-9d62-76f65d09086c)
 
+![image](https://github.com/kvweldon/Intelligence-Gathering/assets/141193154/e8303f00-4a71-4bcf-ab0e-62077c95a7f2)
+
+![image](https://github.com/kvweldon/Intelligence-Gathering/assets/141193154/4512a6ed-4bf1-4923-baff-5c4a16bb2b69)
+
+![image](https://github.com/kvweldon/Intelligence-Gathering/assets/141193154/04463028-8d25-4a85-84d2-a53ee9f053c6)
+
+![image](https://github.com/kvweldon/Intelligence-Gathering/assets/141193154/3a1356d8-c9c6-4d24-ba84-325975edf549)
+
+![image](https://github.com/kvweldon/Intelligence-Gathering/assets/141193154/e5e60e2b-c31a-402e-b527-e4bb78fc2b8f)
+

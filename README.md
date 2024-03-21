@@ -26,6 +26,9 @@ I performed a whois query using the whois database host of 192.0.2.10 against th
 
 **<p style="font-size: 15px;">Step 2: DNS reconnaissance.</p>**
 
+The following pictures show how I was able to enumerate information from DNS about the client; the name server, email server......
+I first checked the lookup server being used by nslookup which is shown to be 203.0.113.226. I entered the clients FQDN to view the address resource records which resulted in the IPv4 address of 203.0.113.1 which is the address originally discovered earlier in the ping scan. The result of non-authoritative indicates that results are being returning by a caching DNS server and not directly from the authoritative server, the server that holds the actual DNS records. 
+
 ![Screenshot 2024-03-20 194757](https://github.com/kvweldon/Intelligence-Gathering/assets/141193154/156318d2-b83a-414e-8b37-0dae991d1b32)
 
 ![image](https://github.com/kvweldon/Intelligence-Gathering/assets/141193154/07c22dc6-c618-4d26-8f11-1f83b008fa18)

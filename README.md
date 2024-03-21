@@ -37,8 +37,11 @@ My next task was to discover the IP address of the authoritative DNS servers rel
 Quering the DNS records are vital in a pentest because it gives a broader understanding of the DNS configuration, helps to identify attack vectors if there are DNS misconfigurations or outdated DNS servers, enumerates subdomains specifically in the SOA record which shows the domain admin email address, and provides insight into the redundancy and failover mechanisms for the DNS infrastructure. 
 
 **<p style="font-size: 15px;">Step 3: DNS reconnaissance with dig.</p>**
+The dig utility was used to exrtact DNS information from an authoritative DNS server registered to the client's FQDN and captured in a file named client_dns.txt. The command used was "dig @203.0.113.225 structureality.com > client_dns.txt". I then viewed the captured output by entering "cat client_dns.txt". This captured the SOA record for structureality.com.
 
 ![image](https://github.com/kvweldon/Intelligence-Gathering/assets/141193154/9daedb38-60ab-4b48-9d62-76f65d09086c)
+
+
 
 ![image](https://github.com/kvweldon/Intelligence-Gathering/assets/141193154/e8303f00-4a71-4bcf-ab0e-62077c95a7f2)
 

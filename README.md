@@ -30,3 +30,5 @@ I performed a whois query using the whois database host of 192.0.2.10 against th
 
 ![image](https://github.com/kvweldon/Intelligence-Gathering/assets/141193154/07c22dc6-c618-4d26-8f11-1f83b008fa18)
 
+![image](https://github.com/kvweldon/Intelligence-Gathering/assets/141193154/9daedb38-60ab-4b48-9d62-76f65d09086c)
+

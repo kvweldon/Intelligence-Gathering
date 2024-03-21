@@ -28,3 +28,5 @@ I performed a whois query using the whois database host of 192.0.2.10 against th
 
 ![Screenshot 2024-03-20 194757](https://github.com/kvweldon/Intelligence-Gathering/assets/141193154/156318d2-b83a-414e-8b37-0dae991d1b32)
 
+![image](https://github.com/kvweldon/Intelligence-Gathering/assets/141193154/07c22dc6-c618-4d26-8f11-1f83b008fa18)
+

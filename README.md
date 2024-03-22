@@ -56,3 +56,5 @@ Displayed in the two pictures below is the captured output of the FDQN appended 
 
 ![image](https://github.com/kvweldon/Intelligence-Gathering/assets/141193154/e5e60e2b-c31a-402e-b527-e4bb78fc2b8f)
 
+![image](https://github.com/kvweldon/Intelligence-Gathering/assets/141193154/15d70d6f-6724-491e-a36f-b9945e8f0bec)
+

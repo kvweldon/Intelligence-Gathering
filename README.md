@@ -36,7 +36,7 @@ My next task was to discover the IP address of the authoritative DNS servers rel
 
 Quering the DNS records are vital in a pentest because it gives a broader understanding of the DNS configuration, helps to identify attack vectors if there are DNS misconfigurations or outdated DNS servers, enumerates subdomains specifically in the SOA record which shows the domain admin email address, and provides insight into the redundancy and failover mechanisms for the DNS infrastructure. 
 
-**<p style="font-size: 15px;">Step 3: DNS reconnaissance with dig.</p>**
+**<p style="font-size: 15px;">Step 4: DNS reconnaissance with dig.</p>**
 
 The dig utility was used to exrtact DNS information from an authoritative DNS server registered to the client's domain and captured in a file named client_dns.txt. The command used was "dig @203.0.113.225 structureality.com > client_dns.txt". I then viewed the captured output by entering "cat client_dns.txt". This captured the SOA record for structureality.com.
 
@@ -48,13 +48,17 @@ Displayed in the two pictures below is the captured output of the FDQN appended 
 
 ![image](https://github.com/kvweldon/Intelligence-Gathering/assets/141193154/4512a6ed-4bf1-4923-baff-5c4a16bb2b69)
 
-
+Below shows me capturing the dig output from the client's domain for the resource records type MX and NS and then viewing the captured output. As with the previous task the captures were appended to the file by using ">>" in the command.
 
 ![image](https://github.com/kvweldon/Intelligence-Gathering/assets/141193154/04463028-8d25-4a85-84d2-a53ee9f053c6)
 
 ![image](https://github.com/kvweldon/Intelligence-Gathering/assets/141193154/3a1356d8-c9c6-4d24-ba84-325975edf549)
 
 ![image](https://github.com/kvweldon/Intelligence-Gathering/assets/141193154/e5e60e2b-c31a-402e-b527-e4bb78fc2b8f)
+
+**<p style="font-size: 15px;">Step 5: Exporting the command history for the pentest report.</p>**
+
+I used the command "history > pentest_command.txt" to export the Terminal window command history and capture it in a file. I then viewed the file using the cat command. 
 
 ![image](https://github.com/kvweldon/Intelligence-Gathering/assets/141193154/897f47fa-fd56-47cd-9a29-97600be8f76e)
 

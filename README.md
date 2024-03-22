@@ -10,6 +10,9 @@ A client has recently started using a new MSP (managed service provider), but th
 The below picture is a representation of the following. First, I oriented myself within the network utilizing "ip a s eth0". This displayed my ip address of 203.0.113.66. Next, I captured the output of a 4 request ping scan of the clients website, structureality.com, into a file named client_info.txt. I used the "ls -l" command to confirm that the output file existed and contained data of 178 bytes. I then uses the command, "cat client_info.txt" to display the contents of the output file. Finally, I used "sudo find / -name client_info.txt" to locate the location of the file. 
 
 
+
+
+
 ![Screenshot 2024-03-20 173355](https://github.com/kvweldon/Intelligence-Gathering/assets/141193154/b509540d-2537-4624-84f2-b8cda3c7f682)
 
 I then used Firefox to view the company's website and get an understanding of the information presented there.

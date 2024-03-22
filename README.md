@@ -24,7 +24,7 @@ I performed a whois query using the whois database host of 192.0.2.10 against th
 ![Screenshot 2024-03-20 193106](https://github.com/kvweldon/Intelligence-Gathering/assets/141193154/b9e52b90-4c84-40c6-8925-00389bb6d73f)
 
 
-**<p style="font-size: 15px;">Step 3: DNS reconnaissance with NSLookup.</p>**
+**<p style="font-size: 15px;">Step 3: DNS reconnaissance with nslookup.</p>**
 
 The following pictures show how I was able to enumerate information from DNS about the client.
 I first checked the lookup server being used by nslookup which is shown to be 203.0.113.226. I entered the clients FQDN to view the address resource records which resulted in the IPv4 address of 203.0.113.1 which is the address originally discovered earlier in the ping scan. The result of non-authoritative indicates that results are being returning by a caching DNS server and not directly from the authoritative server, the server that holds the actual DNS records. In the whois scan from earlier I discovered that the name server for the client, ns.structureality.com, and entered it into nslookup to resolve the name server into its IP adress, 203.0.113.225. Next, I changed the lookup server for nslookup to the IP address of the client's name server by entering the command, "server 203.0.113.225". I viewed the clients FDQN resource records a second time to confirm future results will come from an authoritative DNS server. From here, I viewed the authoritative DNS servers related to the registered domain name using the command "set type=ns" followed by the client's domain which showed the nameserver and IP address. I then entered the command "set type=mx" followed by the client's domain to display the SMTP email servers related to the registered domain name, mail.structureality.com.

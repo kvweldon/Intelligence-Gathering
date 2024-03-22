@@ -11,18 +11,15 @@ The below picture is a representation of the following. First, I oriented myself
 
 ![Screenshot 2024-03-20 173355](https://github.com/kvweldon/Intelligence-Gathering/assets/141193154/b509540d-2537-4624-84f2-b8cda3c7f682)
 
-
 I then used Firefox to view the company's website and get an understanding of the information presented there.
 
 ![Screenshot 2024-03-20 173104](https://github.com/kvweldon/Intelligence-Gathering/assets/141193154/5a412da6-d4c6-4ff2-ae28-207f9bb49c30)
-
 
 **<p style="font-size: 15px;">Step 2: Whois reconnaissance.</p>**
 
 I performed a whois query using the whois database host of 192.0.2.10 against the client's registered domain name and captured the output to a file by entering: "whois -h 192.0.2.10 structureality.com > client_whois.txt". I was then asked to identify the registrar of the domain name which is 515WEB INC.
 
 ![Screenshot 2024-03-20 193106](https://github.com/kvweldon/Intelligence-Gathering/assets/141193154/b9e52b90-4c84-40c6-8925-00389bb6d73f)
-
 
 **<p style="font-size: 15px;">Step 3: DNS reconnaissance with nslookup.</p>**
 
@@ -32,6 +29,7 @@ I first checked the lookup server being used by nslookup which is shown to be 20
 ![Screenshot 2024-03-20 194757](https://github.com/kvweldon/Intelligence-Gathering/assets/141193154/156318d2-b83a-414e-8b37-0dae991d1b32)
 
 My next task was to discover the IP address of the authoritative DNS servers related to the mail server. I entered the command "set type=a" followed by the email server domain name, this resulted in an IP address of 203.0.113.1. Finally, I queried the SOA, Start of Authority, record of the registered domain name to view the origin, responsible party email, serial number and values for secondary DNS update checks. 
+
 ![image](https://github.com/kvweldon/Intelligence-Gathering/assets/141193154/07c22dc6-c618-4d26-8f11-1f83b008fa18)
 
 Quering the DNS records are vital in a pentest because it gives a broader understanding of the DNS configuration, helps to identify attack vectors if there are DNS misconfigurations or outdated DNS servers, enumerates subdomains specifically in the SOA record which shows the domain admin email address, and provides insight into the redundancy and failover mechanisms for the DNS infrastructure. 

@@ -27,7 +27,7 @@ I performed a whois query using the whois database host of 192.0.2.10 against th
 **<p style="font-size: 15px;">Step 3: DNS reconnaissance with NSLookup.</p>**
 
 The following pictures show how I was able to enumerate information from DNS about the client.
-I first checked the lookup server being used by nslookup which is shown to be 203.0.113.226. I entered the clients domain to view the address resource records which resulted in the IPv4 address of 203.0.113.1 which is the address originally discovered earlier in the ping scan. The result of non-authoritative indicates that results are being returning by a caching DNS server and not directly from the authoritative server, the server that holds the actual DNS records. In the whois scan from earlier I discovered that the name server for the client and entered that into nslookup to resolve the name server into its IP adress, 203.0.113.225. Next, I changed the lookup server for nslookup to the IP address of the client's domain by entering the command, "server 203.0.113.225". I viewed the clients domain address resource records a second time to confirm future results will come from an authoritative DNS server. From here, I viewed the authoritative DNS servers related to the registered domain name using the command "set type=ns" followed by the client's domain which showed the nameserver and IP address. I then entered the command "set type=mx" followed by the client's domain to display the SMTP email servers related to the registered domain name, mail.structureality.com.
+I first checked the lookup server being used by nslookup which is shown to be 203.0.113.226. I entered the clients FQDN to view the address resource records which resulted in the IPv4 address of 203.0.113.1 which is the address originally discovered earlier in the ping scan. The result of non-authoritative indicates that results are being returning by a caching DNS server and not directly from the authoritative server, the server that holds the actual DNS records. In the whois scan from earlier I discovered that the name server for the client, ns.structureality.com, and entered it into nslookup to resolve the name server into its IP adress, 203.0.113.225. Next, I changed the lookup server for nslookup to the IP address of the client's name server by entering the command, "server 203.0.113.225". I viewed the clients FDQN resource records a second time to confirm future results will come from an authoritative DNS server. From here, I viewed the authoritative DNS servers related to the registered domain name using the command "set type=ns" followed by the client's domain which showed the nameserver and IP address. I then entered the command "set type=mx" followed by the client's domain to display the SMTP email servers related to the registered domain name, mail.structureality.com.
 
 ![Screenshot 2024-03-20 194757](https://github.com/kvweldon/Intelligence-Gathering/assets/141193154/156318d2-b83a-414e-8b37-0dae991d1b32)
 
@@ -38,15 +38,17 @@ Quering the DNS records are vital in a pentest because it gives a broader unders
 
 **<p style="font-size: 15px;">Step 3: DNS reconnaissance with dig.</p>**
 
-The dig utility was used to exrtact DNS information from an authoritative DNS server registered to the client's FQDN and captured in a file named client_dns.txt. The command used was "dig @203.0.113.225 structureality.com > client_dns.txt". I then viewed the captured output by entering "cat client_dns.txt". This captured the SOA record for structureality.com.
+The dig utility was used to exrtact DNS information from an authoritative DNS server registered to the client's domain and captured in a file named client_dns.txt. The command used was "dig @203.0.113.225 structureality.com > client_dns.txt". I then viewed the captured output by entering "cat client_dns.txt". This captured the SOA record for structureality.com.
 
 ![image](https://github.com/kvweldon/Intelligence-Gathering/assets/141193154/9daedb38-60ab-4b48-9d62-76f65d09086c)
 
-Displayed below is 
+Displayed in the two pictures below is the captured output of the FDQN appended to the same client_dns.txt file. The output was then viewed, using the same cat command, which shows the same A record result from nslookup. 
 
 ![image](https://github.com/kvweldon/Intelligence-Gathering/assets/141193154/e8303f00-4a71-4bcf-ab0e-62077c95a7f2)
 
 ![image](https://github.com/kvweldon/Intelligence-Gathering/assets/141193154/4512a6ed-4bf1-4923-baff-5c4a16bb2b69)
+
+
 
 ![image](https://github.com/kvweldon/Intelligence-Gathering/assets/141193154/04463028-8d25-4a85-84d2-a53ee9f053c6)
 

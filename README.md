@@ -3,7 +3,11 @@ Utilizing Kali Linux 2022.2 to discover systems in a lab environment.
 
 <h1>Scenario</h1>
 
-A client has recently started using a new MSP (managed service provider), but they are not sure the technology is implented securely. They have hired me as their pentester to discover any weaknesses within their network. I will conduct an assessment by performing initial reconnaissance and information gathering by reviewing the client's website, extracting information using whois and performing DNS reconnaissance - all whie retaining command history for a pentest report.
+A new client, Structureality has recently started using a new MSP (managed service provider), but they are not sure the technology is implented securely. Additionally, Structureality has recently implemented a secuirty improvement campaign and wants an assessment of their progress thus far. They have hired me as their pentester to evaluate the security of their network. Over the course of several labs I will work through the different phases of a pentest and document each of these phases across multiple repositories. Come on an ehtical hacking journey with me. 
+
+**<p style="font-size: 18px;">PHASE 1</p>**
+
+I will conduct an assessment by performing initial reconnaissance and information gathering by reviewing the client's website, extracting information using whois and performing DNS reconnaissance - all while retaining command history for a pentest report.
 
 **<p style="font-size: 15px;">Step 1: Find and explore a clients website.</p>**
 
